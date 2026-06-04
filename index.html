@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Traffic Prediction</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🚦 Smart Traffic Prediction</h1>
+        <p>Using Data Analytics & Machine Learning</p>
+    </div>
+
+    <div class="card">
+
+        <label>Select City</label>
+        <select id="city" onchange="updateAreas()">
+            <option>Hyderabad</option>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+        </select>
+
+        <label>Select Area</label>
+        <select id="area"></select>
+
+        <label>Hour of Day</label>
+        <input type="number" id="hour" min="0" max="23">
+
+        <label>Weather</label>
+        <select id="weather">
+            <option value="1">Sunny</option>
+            <option value="2">Cloudy</option>
+            <option value="3">Rainy</option>
+        </select>
+
+        <label>Day Type</label>
+        <select id="day">
+            <option value="0">Weekday</option>
+            <option value="1">Weekend</option>
+        </select>
+
+        <button onclick="predictTraffic()">
+            Predict Traffic
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <div class="chart-card">
+        <canvas id="trafficChart"></canvas>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
